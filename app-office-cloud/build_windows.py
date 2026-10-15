@@ -13,7 +13,7 @@ counts=prepare(vendor)
 shutil.copy2(root/'app-office-cloud/LEEME.md',vendor/'MIDIA-CLOUD-LEEME.md')
 iscc=Path('C:/Program Files (x86)/Inno Setup 6/ISCC.exe')
 subprocess.run([str(iscc),'/DAppSource='+str(vendor),'/DOutputDirectory='+str(out),str(root/'app-office-cloud/installer.iss')],check=True)
-new=out/'ONLYOFFICE-WPS-Cloud-9.4.0.3-Windows-x64-Setup.exe'
+new=out/'ONLYOFFICE-WPS-Cloud-9.4.0.4-Windows-x64-Setup.exe'
 installed=out/'installed'
 subprocess.run([str(new),'/VERYSILENT','/SUPPRESSMSGBOXES','/NORESTART','/DIR='+str(installed)],check=True)
 assert (installed/'MIDIACloud.exe').exists() and (installed/'providers/merp/config.json').exists()

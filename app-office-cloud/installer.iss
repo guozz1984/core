@@ -7,7 +7,7 @@
 [Setup]
 AppId={{8EF10DC1-0DB5-4794-8624-5DD74A8195CD}
 AppName=ONLYOFFICE WPS
-AppVersion=9.4.0.3
+AppVersion=9.4.0.4
 AppPublisher=MIDIA · Cloud MERP y compatibilidad WPS
 AppPublisherURL=https://gestion.midiashops.com/diseno-v2/apps.html#onlyoffice-wps
 DefaultDirName={localappdata}\Programs\ONLYOFFICE WPS
@@ -17,7 +17,7 @@ ArchitecturesAllowed=x64compatible
 ArchitecturesInstallIn64BitMode=x64compatible
 MinVersion=10.0
 OutputDir={#OutputDirectory}
-OutputBaseFilename=ONLYOFFICE-WPS-Cloud-9.4.0.3-Windows-x64-Setup
+OutputBaseFilename=ONLYOFFICE-WPS-Cloud-9.4.0.4-Windows-x64-Setup
 Compression=lzma2/fast
 SolidCompression=yes
 ChangesAssociations=yes
