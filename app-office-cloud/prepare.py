@@ -7,7 +7,7 @@ def prepare(root):
     resources=root/'Contents/Resources' if (root/'Contents').exists() else root
     providers=resources/'providers/merp';providers.mkdir(parents=True,exist_ok=True)
     (providers/'config.json').write_text(json.dumps({'provider':'merp','name':'MIDIA Cloud','entryPage':'https://gestion.midiashops.com','startPage':'/diseno-v2/office-cloud.html','editorPage':'/diseno-v2/office-cloud-editor/','order':0,'icons':{'themeLight':{'connectionsList':'./cloud.png','buttonLogo':'./button.svg'},'themeDark':{'connectionsList':'./cloud.png','buttonLogo':'./button.svg'}}},indent=2))
-    branding=Path(__file__).resolve().parents[1]/'branding/office-mosaic'
+    branding=Path(__file__).resolve().parents[1]/'branding/office-midia-page'
     shutil.copy2(branding/'AppIcon.ico',resources/'MIDIA-Office.ico')
     shutil.copy2(branding/'master.png',providers/'cloud.png')
     icon=base64.b64encode((branding/'master.png').read_bytes()).decode()
@@ -43,6 +43,6 @@ def prepare(root):
             s=s.replace(ready,ready+marker+timer,1)
         p.write_text(s,encoding="utf-8");counts[app]=count
     assert len(counts)>=3,counts
-    (resources/'MIDIA-CLOUD.json').write_text(json.dumps({'version':'9.4.0.3','autosave_gap_seconds':10,'sync_poll_seconds':5,'cloud':'https://gestion.midiashops.com/diseno-v2/office-cloud.html','autosave_calls':counts},indent=2))
+    (resources/'MIDIA-CLOUD.json').write_text(json.dumps({'version':'9.4.0.4','autosave_gap_seconds':10,'sync_poll_seconds':5,'cloud':'https://gestion.midiashops.com/diseno-v2/office-cloud.html','autosave_calls':counts},indent=2))
     return counts
 if __name__=='__main__':print(json.dumps(prepare(sys.argv[1])))
