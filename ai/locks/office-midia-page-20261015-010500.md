@@ -14,3 +14,6 @@ files:
 - branding/office-midia-page/README.md
 expires: 2026-10-16 23:59 Europe/Madrid
 reason: Approved MIDIA page logo release desktop9.4.0.4. Preserve native WPS converter and cloud logic. Same source as private MERP PR2361. No open PRs and clean master checked. Existing workflow fixed artifact alias retained in builder, workflow untouched.
+
+status: released_on_merge
+validation: Windows run38663180182 SUCCESS; verified WPS converter SHA, Go race tests, installation, XLSX launcher, agent, startup. Same source888b4a6d in MERP PR2361.
